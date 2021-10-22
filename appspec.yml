@@ -5,9 +5,11 @@ files:
     destination: /home/ubuntu/practice/
     overwrite: yes
 hooks:
-  BeforeInstall:
-    - location: scripts/container_stop.sh
-  AfterInstall:
-    - location: scripts/image_build.sh
+  # BeforeInstall:
+  #   - location: scripts/container_stop.sh
+  # AfterInstall:
+  #   - location: scripts/image_build.sh
+  # ApplicationStart:
+  #   - location: scripts/run.sh
   ApplicationStart:
-    - location: scripts/run.sh
+    - location: scripts/compose_run.sh
