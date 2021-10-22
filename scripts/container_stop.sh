@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 DOCKER_WEB_CONTAINER = $(docker ps -a -f name=practice -q)
 
 if [ -z ${DOCKER_WEB_CONTAINER}]
