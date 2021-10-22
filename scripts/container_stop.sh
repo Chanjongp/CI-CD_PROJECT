@@ -1,6 +1,10 @@
 #!/bin/bash
 
+
+DOCKER_WEB_CONTAINER = $(docker container ls -f "name=practice" -q)
+
 if [ -z ${DOCKER_WEB_CONTAINER}]
+
 then
     echo "Not Found Container"
 else
