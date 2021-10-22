@@ -30,3 +30,15 @@ deploy:
       branch: main
     bucket: chanjongs
     region: ap-northeast-2
+  - provider: codedeploy
+    access_key_id: ""$AWS_ACCESS_KEY"
+    secret_access_key: "$AWS_SECRET_KEY"
+    bucket: chanjongs
+    key: se_upload/practice.zip
+    bundle_type: zip
+    application: aws-chanjong
+    deployment_group: ChanCD
+    region: ap-northeast-2
+    on:
+      repo: Chanjongp/CI-CD_PROJECT
+      branch: main
