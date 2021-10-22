@@ -36,8 +36,8 @@ deploy:
     bucket: chanjongs
     key: se_upload/practice.zip
     bundle_type: zip
-    application: aws-chanjong
-    deployment_group: ChanCD
+    application: chan-deploy
+    deployment_group: practice
     region: ap-northeast-2
     on:
       repo: Chanjongp/CI-CD_PROJECT
