@@ -17,13 +17,13 @@ branches:
     - main
 before_deploy:
   - zip -r practice ./*
-  - mkdir -p s3_upload
-  - mv practice.zip s3_upload/practice.zip
+  - mkdir -p dp_upload
+  - mv practice.zip dp_upload/practice.zip
 deploy:
   - provider: s3
     access_key_id: "$AWS_ACCESS_KEY"
     secret_access_key: "$AWS_SECRET_KEY"
-    local_dir: s3_upload
+    local_dir: dp_upload
     skip_cleanup: true
     on:
       repo: Chanjongp/CI-CD_PROJECT
