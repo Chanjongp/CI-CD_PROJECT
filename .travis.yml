@@ -15,27 +15,3 @@ cache:
 branches:
   only:
     - main
-before_deploy:
-  - zip -r practice ./*
-  - mkdir -p s3_upload
-  - mv practice.zip s3_upload/practice.zip
-deploy:
-  - provider: s3
-    access_key_id: "$AWS_ACCESS_KEY"
-    secret_access_key: "$AWS_SECRET_KEY"
-    local_dir: s3_upload
-    skip_cleanup: true
-    on:
-      repo: CI-CD_PROJECT
-      branch: main
-    bucket: chanjongs
-    region: ap-northeast-2
-  - provider: codedeploy
-    access_key_id: ""$AWS_ACCESS_KEY"
-    secret_access_key: "$AWS_SECRET_KEY"
-    bucket: chanjongs
-    key: se_upload/practice.zip
-    bundle_type: zip
-    application: aws-chanjong
-    deployment_group: ChanCD
-    region: ap-northeast-2
