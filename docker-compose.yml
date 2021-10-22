@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: practice
-    command: gunicorn --bind 0.0.0.0:8000 cicd.wsgi.application
+    command: gunicorn --bind 0.0.0.0:8000 cicd.wsgi:application
     expose:
       - "8000"
     image: pcj0198/practice
