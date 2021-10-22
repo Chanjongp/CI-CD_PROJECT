@@ -27,7 +27,7 @@ deploy:
     local_dir: dpl_cd_upload
     skip_cleanup: true
     on:
-      repo: Chanjongp/CI-CD_PROJECT
+      repo: CI-CD_PROJECT
       branch: main
     bucket: chanjongs
     region: ap-northeast-2
