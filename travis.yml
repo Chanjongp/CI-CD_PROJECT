@@ -17,9 +17,9 @@ branches:
   only:
     - main
 before_deploy:
-  - zip -r aws-carping ./*
+  - zip -r practice ./*
   - mkdir -p dpl_cd_upload
-  - mv aws-carping.zip dpl_cd_upload/aws-carping.zip
+  - mv aws-carping.zip dpl_cd_upload/practice.zip
 deploy:
   - provider: s3
     access_key_id: "$AWS_ACCESS_KEY"
@@ -27,7 +27,7 @@ deploy:
     local_dir: dpl_cd_upload
     skip_cleanup: true
     on:
-      repo: TourKakao-Carping/Carping-Backend
+      repo: Chanjongp/CI-CD_PROJECT
       branch: main
     bucket: chanjongs
     region: ap-northeast-2
