@@ -34,7 +34,7 @@ deploy:
     access_key_id: "$AWS_ACCESS_KEY"
     secret_access_key: "$AWS_SECRET_KEY"
     bucket: chanjongs
-    key: se_upload/practice.zip
+    key: practice.zip
     bundle_type: zip
     application: chan-deploy
     deployment_group: practice
