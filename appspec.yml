@@ -2,5 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/practice/zip/
+    destination: /home/ubuntu/practice/
     overwrite: yes
+hooks:
+  BeforeInstall:
+    - location: scripts/container_stop.sh
+  AfterInstall:
+    - location: scripts/start-up.sh
