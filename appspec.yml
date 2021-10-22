@@ -8,4 +8,6 @@ hooks:
   BeforeInstall:
     - location: scripts/container_stop.sh
   AfterInstall:
-    - location: scripts/start-up.sh
+    - location: scripts/image_build.sh
+  ApplicationStart:
+    - location: scripts/run.sh
